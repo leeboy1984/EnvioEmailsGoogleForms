@@ -46,9 +46,10 @@ function emailOnFormSubmit(e){
   mailHtmlBody = HtmlService.createHtmlOutputFromFile("email_body").getContent();
   
   // Vamos a realizar los reemplazos
-  mailHtmlBody = mailHtmlBody.replaceAll("SUBMITTER_EMAIL", submitter);
-  mailHtmlBody = mailHtmlBody.replaceAll("COMO_TE_LLAMAS", comoTeLlamas);
-  mailHtmlBody = mailHtmlBody.replaceAll("DESDE_DONDE_ACCEDES", desdeDondeAccedes);
+  mailHtmlBody = mailHtmlBody.replace("SUBMITTER_EMAIL_1", submitter);
+  mailHtmlBody = mailHtmlBody.replace("SUBMITTER_EMAIL_2", submitter);
+  mailHtmlBody = mailHtmlBody.replace("COMO_TE_LLAMAS", comoTeLlamas);
+  mailHtmlBody = mailHtmlBody.replace("DESDE_DONDE_ACCEDES", desdeDondeAccedes);
 
   /*
   // Objeto con los identificadores de las banderas almacenadas en GDrive y la variable con la bandera
